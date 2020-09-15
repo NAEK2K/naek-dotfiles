@@ -19,3 +19,5 @@ set cursorline
 "" set showmatch
  
 let python_highlight_all = 1
+
+set backspace=indent,eol,start
