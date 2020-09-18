@@ -1,16 +1,17 @@
 " misc
 set title
 set number " numbers on side
+set ruler " x, y on bottom right
 set cursorline " line on cursor
 set mouse=a " use mouse
 set showmatch " brackets
 set fileencoding=utf-8
 set autoread " read again if file changed
-set ruler " x, y on bottom right
 set showcmd
 set backspace=indent,eol,start " backspace over anything
+set termguicolors
 
-" completion
+" cmd completion
 set wildmenu
 set wildchar=<Tab>
 set wildmode=longest,full
