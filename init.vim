@@ -5,10 +5,15 @@ set cursorline " line on cursor
 set mouse=a " use mouse
 set showmatch " brackets
 set fileencoding=utf-8
-set autoread " read if changed
-set ruler
-set wildmenu
+set autoread " read again if file changed
+set ruler " x, y on bottom right
 set showcmd
+set backspace=indent,eol,start " backspace over anything
+
+" completion
+set wildmenu
+set wildchar=<Tab>
+set wildmode=longest,full
  
 " wrapping
 set nowrap
