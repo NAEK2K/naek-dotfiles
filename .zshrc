@@ -15,10 +15,10 @@ autoload -Uz compinit && compinit
 # git branch
 autoload -Uz vcs_info
 precmd () { vcs_info }
-zstyle ':vcs_info:git:*' formats '[%b]'
+zstyle ':vcs_info:git:*' formats 'on %F{green}%b%f'
 setopt PROMPT_SUBST
 
 # prompt 
 NEWLINE=$'\n'
-PROMPT='[%n] [%3d] ${vcs_info_msg_0_}${NEWLINE}>> '
+PROMPT='%F{cyan}%n%f in %F{yellow}%3d%f ${vcs_info_msg_0_}${NEWLINE}>> '
 RPROMPT=""
