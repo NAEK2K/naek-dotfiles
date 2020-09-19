@@ -10,9 +10,7 @@ setopt nomatch # print error if no match
 setopt notify # report background jobs immediately
 
 # completion
-zstyle :compinstall filename '/home/nick/.zshrc'
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 # prompt 
 PROMPT="[%n][%3d] >> "
