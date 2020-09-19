@@ -12,6 +12,6 @@ setopt notify # report background jobs immediately
 # completion
 autoload -Uz compinit && compinit
 
-# promp 
+# prompt 
 PROMPT="[%n][%3d]>> "
 RPROMPT=""
