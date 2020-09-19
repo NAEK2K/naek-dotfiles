@@ -12,6 +12,13 @@ setopt notify # report background jobs immediately
 # completion
 autoload -Uz compinit && compinit
 
+# git branch
+autoload -Uz vcs_info
+precmd () { vcs_info }
+zstyle ':vcs_info:git:*' formats '[%b]'
+setopt PROMPT_SUBST
+
 # prompt 
-PROMPT="[%n][%3d]>> "
+NEWLINE=$'\n'
+PROMPT='[%n] [%3d] ${vcs_info_msg_0_}${NEWLINE}>> '
 RPROMPT=""
