@@ -13,6 +13,7 @@ set showcmd
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
 set complete-=i
+set completeopt-=preview
 
 " cmd completion
 set wildmenu
