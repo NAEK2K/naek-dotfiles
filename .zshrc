@@ -1,18 +1,19 @@
-# Lines configured by zsh-newuser-install
+# history
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob nomatch beep notify
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+
+# options
+setopt autocd # go to dir w/o cd
+setopt extendedglob # add patterns 
+setopt nomatch # print error if no match
+setopt notify # report background jobs immediately
+
+# completion
 zstyle :compinstall filename '/home/nick/.zshrc'
- 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
- 
-# Nick's Config
- 
-PROMPT="[%n@%m] >> "
-RPROMPT="%d"
+
+# prompt 
+PROMPT="[%n@%m][%3d] >> "
+RPROMPT=""
