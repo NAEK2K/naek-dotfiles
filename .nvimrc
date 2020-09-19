@@ -1,4 +1,6 @@
 " misc
+syntax enable
+filetype plugin indent on
 set title
 set number " numbers on side
 set ruler " x, y on bottom right
@@ -10,6 +12,7 @@ set autoread " read again if file changed
 set showcmd
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
+set complete-=i
 
 " cmd completion
 set wildmenu
@@ -32,10 +35,12 @@ set shiftwidth=2
 set smartindent
 set expandtab
 set autoindent
-let g:python_recommended_style = 0
  
 " search
 set smartcase
 set ignorecase
-set incsearch
+set incsearch " show matches in realtime
 set gdefault " automatically global
+
+" lang specific
+let g:python_recommended_style = 0
