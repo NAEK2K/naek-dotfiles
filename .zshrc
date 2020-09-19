@@ -15,5 +15,5 @@ autoload -Uz compinit
 compinit
 
 # prompt 
-PROMPT="[%n@%m][%3d] >> "
+PROMPT="[%n][%3d] >> "
 RPROMPT=""
