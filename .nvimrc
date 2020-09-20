@@ -47,16 +47,18 @@ set gdefault " automatically global
 let g:python_recommended_style = 0
 
 " plug
-call plug#begin()
+if !empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
+  call plug#begin()
 
-" deoplete + jedi
-Plug 'Shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-jedi'
-let g:deoplete#enable_at_startup = 1
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+  " deoplete + jedi
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'deoplete-plugins/deoplete-jedi'
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
-" nerdtree
-Plug 'preservim/nerdtree'
-let g:NERDTreeShowHidden=1
+  " nerdtree
+  Plug 'preservim/nerdtree'
+  let g:NERDTreeShowHidden=1
 
-call plug#end()
+  call plug#end()
+endif
