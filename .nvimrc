@@ -59,6 +59,12 @@ if !empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
   " nerdtree
   Plug 'preservim/nerdtree'
   let g:NERDTreeShowHidden=1
+  
+  " nord
+  Plug 'arcticicestudio/nord-vim'
 
   call plug#end()
+  
+  " nord
+  colorscheme nord
 endif
