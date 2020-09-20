@@ -21,4 +21,4 @@ setopt PROMPT_SUBST
 # prompt 
 NEWLINE=$'\n'
 PROMPT='%F{cyan}%n%f in %F{yellow}%3d%f ${vcs_info_msg_0_}${NEWLINE}>> '
-RPROMPT=""
+RPROMPT=''
