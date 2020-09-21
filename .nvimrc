@@ -12,8 +12,10 @@ set autoread " read again if file changed
 set showcmd
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
-set complete-=i
-set completeopt-=preview
+
+" autocompletion
+set completeopt-=longest,menuone
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap tab to ctrl-n if pop up menu visible
 
 " cmd completion
 set wildmenu
@@ -45,26 +47,3 @@ set gdefault " automatically global
 
 " lang specific
 let g:python_recommended_style = 0
-
-" plug
-if !empty(glob("$HOME/.local/share/nvim/site/autoload/plug.vim"))
-  call plug#begin()
-
-  " deoplete + jedi
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'deoplete-plugins/deoplete-jedi'
-  let g:deoplete#enable_at_startup = 1
-  inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-  " nerdtree
-  Plug 'preservim/nerdtree'
-  let g:NERDTreeShowHidden=1
-  
-  " nord
-  Plug 'arcticicestudio/nord-vim'
-
-  call plug#end()
-  
-  " nord
-  colorscheme nord
-endif
