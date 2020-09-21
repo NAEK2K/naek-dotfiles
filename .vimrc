@@ -44,6 +44,7 @@ set smartcase
 set ignorecase
 set incsearch " show matches in realtime
 set gdefault " automatically global
+set hlsearch " highlight all searches
 
 " lang specific
 let g:python_recommended_style = 0
