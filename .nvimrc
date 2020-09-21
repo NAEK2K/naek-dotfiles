@@ -14,7 +14,7 @@ set backspace=indent,eol,start " backspace over anything
 set termguicolors
 
 " autocompletion
-set completeopt-=longest,menuone
+set completeopt=longest,menuone
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap tab to ctrl-n if pop up menu visible
 
 " cmd completion
