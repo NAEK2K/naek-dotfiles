@@ -28,7 +28,7 @@ set linebreak
  
 " undo
 set undofile
-set undodir=~/.config/nvim/undodir
+set undodir=~/.vim/undodir
  
 " spaces / tabs
 set shiftwidth=2
