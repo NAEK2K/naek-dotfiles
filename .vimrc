@@ -1,34 +1,42 @@
 " misc
 syntax enable
 filetype plugin indent on
+set mouse=a " use mouse
+set showmatch " brackets
+set autoread " read again if file changed
+set backspace=indent,eol,start " backspace over anything
+set termguicolors
+
+" interface
 set title
 set number " numbers on side
 set ruler " x, y on bottom right
 set cursorline " line on cursor
-set mouse=a " use mouse
-set showmatch " brackets
-set fileencoding=utf-8
-set autoread " read again if file changed
 set showcmd
-set backspace=indent,eol,start " backspace over anything
-set termguicolors
+
+" encoding
+set encoding=utf-8
+set fileencoding=utf-8
 
 " autocompletion
+set complete-=i
 set completeopt=longest,menuone
+set omnifunc=syntaxcomplete#Complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap tab to ctrl-n if pop up menu visible
 
 " cmd completion
-set wildmenu
+set wildmenu 
 set wildchar=<Tab>
-set wildmode=longest,full
+set wildmode=list:longest,list:full
  
 " wrapping
 set nowrap
 set linebreak
  
 " undo
+set history=1000
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undo
  
 " spaces / tabs
 set shiftwidth=2
