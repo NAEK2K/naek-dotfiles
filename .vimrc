@@ -7,6 +7,7 @@ set autoread " read again if file changed
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
 set belloff=all
+set clipboard=unnamed
 
 " interface
 set title
