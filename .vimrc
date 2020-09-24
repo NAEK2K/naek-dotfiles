@@ -1,20 +1,32 @@
 " misc
-syntax enable
 filetype plugin indent on
 set mouse=a " use mouse
-set showmatch " brackets
 set autoread " read again if file changed
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
-set belloff=all
 set clipboard=unnamed
+if !empty(glob("/usr/bin/zsh"))
+  set shell=/usr/bin/zsh
+endif
+
+" macros
+:nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR> " remove trailing whitespace
 
 " interface
+syntax enable
 set title
 set number " numbers on side
 set ruler " x, y on bottom right
 set cursorline " line on cursor
 set showcmd
+set showmatch " brackets
+if !empty(glob("~/.vim/colors/nord.vim"))
+  colorscheme nord
+endif
+
+" alerts
+set belloff=all
+set visualbell
 
 " encoding
 set encoding=utf-8
@@ -24,7 +36,7 @@ set fileencoding=utf-8
 set complete-=i
 set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap tab to ctrl-n if pop up menu visible
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap ctrl-n to tab if pop up menu visible
 
 " cmd completion
 set wildmenu 
