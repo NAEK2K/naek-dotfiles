@@ -57,9 +57,9 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set smartindent
 set expandtab
 set autoindent
+set copyindent
  
 " search
 set smartcase
