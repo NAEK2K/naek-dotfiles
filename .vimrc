@@ -20,8 +20,10 @@ set ruler " x, y on bottom right
 set cursorline " line on cursor
 set showcmd
 set showmatch " brackets
-if !empty(glob("~/.vim/colors/nord.vim"))
+if !empty(glob("~/.vim/colors/nord.vim")) " auto-install nord theme
   colorscheme nord
+else
+  silent !curl https://raw.githubusercontent.com/arcticicestudio/nord-vim/develop/colors/nord.vim --create-dirs --output ~/.vim/colors/nord.vim
 endif
 
 " alerts
