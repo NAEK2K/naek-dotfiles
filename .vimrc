@@ -1,4 +1,4 @@
-" misc
+" misc test
 filetype plugin indent on
 set mouse=a " use mouse
 set autoread " read again if file changed
