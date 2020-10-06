@@ -24,6 +24,10 @@ if !empty(glob("~/.vim/colors/nord.vim")) " auto-install nord theme
   colorscheme nord
 endif
 
+" splits
+set splitright
+set splitbelow
+
 " alerts
 set belloff=all
 set visualbell
