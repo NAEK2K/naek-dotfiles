@@ -4,7 +4,7 @@ set mouse=a " use mouse
 set autoread " read again if file changed
 set backspace=indent,eol,start " backspace over anything
 set termguicolors
-set clipboard=unnamed
+set clipboard=unnamedplus
 if !empty(glob("/usr/bin/zsh"))
   set shell=/usr/bin/zsh
 endif
