@@ -57,10 +57,10 @@ set undofile
 set undodir=~/.vim/undo
  
 " spaces / tabs
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set copyindent
@@ -71,6 +71,3 @@ set ignorecase
 set incsearch " show matches in realtime
 set gdefault " automatically global
 set hlsearch " highlight all searches
-
-" lang specific
-let g:python_recommended_style = 0
