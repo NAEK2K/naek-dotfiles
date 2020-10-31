@@ -20,7 +20,7 @@ set ruler " x, y on bottom right
 set cursorline " line on cursor
 set showcmd
 set showmatch " brackets
-if !empty(glob("~/.vim/colors/nord.vim")) " auto-install nord theme
+if !empty(glob("~/.vim/colors/nord.vim")) " activate nord theme
   colorscheme nord
 endif
 
@@ -71,14 +71,3 @@ set ignorecase
 set incsearch " show matches in realtime
 set gdefault " automatically global
 set hlsearch " highlight all searches
-
-" vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin()
-Plug 'psf/black', { 'branch': 'stable' }
-call plug#end()
