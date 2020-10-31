@@ -1,7 +1,3 @@
-# alias
-alias ym='youtube-dlc -x --embed-thumbnail --audio-format mp3'
-export PATH=/home/nick/.local/bin:$PATH
-
 # history
 HISTFILE=~/.histfile
 HISTSIZE=1000
