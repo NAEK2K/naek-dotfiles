@@ -6,8 +6,23 @@ set backspace=indent,eol,start " backspace over anything
 set termguicolors
 set clipboard=unnamedplus
 if !empty(glob("/usr/bin/zsh"))
-  set shell=/usr/bin/zsh
+    set shell=/usr/bin/zsh
 endif
+
+" vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+call plug#begin()
+Plug 'dense-analysis/ale'
+call plug#end()
+
+" ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {"python": ["black"]}
+let g:ale_linters = {"python": ["flake8"]}
 
 " macros
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR> " remove trailing whitespace
@@ -21,7 +36,7 @@ set cursorline " line on cursor
 set showcmd
 set showmatch " brackets
 if !empty(glob("~/.vim/colors/nord.vim")) " activate nord theme
-  colorscheme nord
+    colorscheme nord
 endif
 
 " splits
@@ -40,22 +55,21 @@ set fileencoding=utf-8
 set complete-=i
 set completeopt=longest,menuone
 set omnifunc=syntaxcomplete#Complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" " remap ctrl-n to tab if pop up menu visible
 
 " cmd completion
-set wildmenu 
+set wildmenu
 set wildchar=<Tab>
 set wildmode=list:longest,list:full
- 
+
 " wrapping
 set nowrap
 set linebreak
- 
+
 " undo
 set history=1000
 set undofile
 set undodir=~/.vim/undo
- 
+
 " spaces / tabs
 set shiftwidth=4
 set tabstop=4
@@ -64,7 +78,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set copyindent
- 
+
 " search
 set smartcase
 set ignorecase
