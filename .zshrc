@@ -12,6 +12,22 @@ setopt notify # report background jobs immediately
 # completion
 autoload -Uz compinit && compinit
 
+# alias
+alias ls="ls -1 --color=auto"
+
+# git alias
+alias gs="git status"
+alias ga="git add"
+alias gp="git pull"
+alias gpr="git pull --rebase"
+alias gb="git branch"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gi="git init"
+
+
 # git branch
 autoload -Uz vcs_info
 precmd () { vcs_info }
