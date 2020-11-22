@@ -18,10 +18,7 @@ endif
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-<<<<<<< HEAD
 Plug 'gabrielelana/vim-markdown'
-=======
->>>>>>> 8d66887bb5de9a1d75dac5dd35a2c0089a825312
 call plug#end()
 
 " ale
