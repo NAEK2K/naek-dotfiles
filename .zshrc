@@ -5,7 +5,7 @@ SAVEHIST=1000
 
 # options
 setopt autocd # go to dir w/o cd
-setopt extendedglob # add patterns 
+setopt extendedglob # add patterns
 setopt nomatch # print error if no match
 setopt notify # report background jobs immediately
 
@@ -26,6 +26,7 @@ alias gcob="git checkout -b"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gi="git init"
+alias gd="git diff"
 
 
 # git branch
@@ -34,7 +35,7 @@ precmd () { vcs_info }
 zstyle ':vcs_info:git:*' formats 'on %F{green}%b%f'
 setopt PROMPT_SUBST
 
-# prompt 
+# prompt
 NEWLINE=$'\n'
 PROMPT='%F{cyan}%n%f in %F{yellow}%3d%f ${vcs_info_msg_0_}${NEWLINE}$ '
 RPROMPT=''
