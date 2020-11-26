@@ -3,7 +3,6 @@ filetype plugin indent on
 set mouse=a " use mouse
 set autoread " read again if file changed
 set backspace=indent,eol,start " backspace over anything
-" set termguicolors
 if !empty(glob("/usr/bin/zsh"))
   set shell=/usr/bin/zsh
 endif
@@ -18,7 +17,7 @@ endif
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'gabrielelana/vim-markdown'
+Plug 'patstockwell/vim-monokai-tasty'
 call plug#end()
 
 " ale
@@ -32,15 +31,13 @@ let g:ale_python_auto_pipenv = 1
 
 " interface
 syntax enable
+colorscheme vim-monokai-tasty
 set title
 set number " numbers on side
 set ruler " x, y on bottom right
 set cursorline " line on cursor
 set showcmd
 set showmatch " brackets
-if !empty(glob("~/.vim/colors/nord.vim")) " activate nord theme
-    colorscheme nord
-endif
 
 " splits
 set splitright
