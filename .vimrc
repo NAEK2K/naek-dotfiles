@@ -1,5 +1,6 @@
 " misc
 filetype plugin indent on
+set termguicolors
 set mouse=a " use mouse
 set autoread " read again if file changed
 set backspace=indent,eol,start " backspace over anything
@@ -17,7 +18,7 @@ endif
 call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'patstockwell/vim-monokai-tasty'
+Plug 'tomasr/molokai'
 call plug#end()
 
 " ale
@@ -31,7 +32,7 @@ let g:ale_python_auto_pipenv = 1
 
 " interface
 syntax enable
-colorscheme vim-monokai-tasty
+colorscheme molokai
 set title
 set number " numbers on side
 set ruler " x, y on bottom right
