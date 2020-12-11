@@ -20,12 +20,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasr/molokai'
 call plug#end()
 
-" ale
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {"python": ["black"]}
-let g:ale_linters = {"python": ["flake8"]}
-let g:ale_python_auto_pipenv = 1
-
 " macros
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR> " remove trailing whitespace
 
