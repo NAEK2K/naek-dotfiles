@@ -64,6 +64,9 @@ set linebreak
 set history=1000
 set undofile
 set undodir=~/.vim/undo
+if empty(glob('~/.vim/undo'))
+    silent !mkdir -p ~/.vim/undo
+endif
 
 " spaces / tabs
 set shiftwidth=4
