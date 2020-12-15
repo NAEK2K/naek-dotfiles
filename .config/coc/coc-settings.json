@@ -1,0 +1,9 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+      "python"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/usr/local/bin/flake8"
+}
