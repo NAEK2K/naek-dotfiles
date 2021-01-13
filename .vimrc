@@ -20,7 +20,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " airline
