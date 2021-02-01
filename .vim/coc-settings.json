@@ -1,8 +1,16 @@
 {
     "coc.preferences.formatOnSaveFiletypes": [
-      "python"
+      "python",
+      "html",
+      "typescript",
+      "javascript",
+      "json",
+      "css"
     ],
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Args": ["--ignore=E501,E402"]
+    "python.linting.flake8Args": ["--ignore=E501,E402"],
+    "html.format.enable": true,
+    "typescript.format.enabled": true,
+    "json.format.enable": true
 }
