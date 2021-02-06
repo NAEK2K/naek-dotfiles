@@ -22,6 +22,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 Plug 'luochen1990/rainbow'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " airline
@@ -30,6 +32,10 @@ let g:airline_theme='molokai'
 
 " rainbow
 let g:rainbow_active = 1
+
+" vim-markdown
+let g:vim_markdown_math = 1
+let g:vim_markdown_folding_disabled = 1
 
 " macros
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR> " remove trailing whitespace
