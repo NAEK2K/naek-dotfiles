@@ -20,11 +20,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mattn/emmet-vim'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
+
+" rainbow
+let g:rainbow_active = 1
 
 " macros
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR> " remove trailing whitespace
